@@ -11,7 +11,7 @@ public class CreditCardPayment implements PaymentStrategy{
 
     @Override
     public void pay(double amount) {
-        System.out.println("Paid " + amount + "EGB using Credit Card ending in " + cardNumber);
+        System.out.println("Paid " + amount + " EGP using Credit Card with number " + cardNumber);
     }
 
 }

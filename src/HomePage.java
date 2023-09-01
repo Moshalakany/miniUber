@@ -60,7 +60,7 @@ public class HomePage {
                             break;
                         }
                     }
-                    PaymentProcess.payAmount(request.requestRide());
+                   PaymentProcess.payAmount(RequestRide.cost);
                     home();
                 break;
                 case '2':

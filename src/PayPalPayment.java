@@ -7,6 +7,6 @@ public class PayPalPayment implements PaymentStrategy{
 
     @Override
     public void pay(double amount) {
-        System.out.println("Paid " + amount + "EGP using PayPal with email: " + email);
+        System.out.println("Paid " + amount + " EGP using PayPal with email: " + email);
     }
 }

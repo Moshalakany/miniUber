@@ -2,13 +2,9 @@ import java.util.Scanner;
 public class HomePage {
     Scanner input = new Scanner(System.in);
     Scanner in = new Scanner(System.in);
-
-    public HomePage()
-    {
+    public HomePage() {
     }
-
     Rider rider;
-
     public void home() {
         char choice;
         int type;
@@ -35,24 +31,28 @@ public class HomePage {
                             rider = new normal("ZSC 1911", "Black", "KIA", "Bassel");
                             request.setRideDetails(rider, pickup, dest);
                             request.requestRide();
+                            PaymentProcess.payAmount(RequestRide.cost);
                             break;
                         }
                         case 2: {
                             rider = new premium("NUM 1", "Grey", "BMW", "Yehia");
                             request.setRideDetails(rider, pickup, dest);
                             request.requestRide();
+                            PaymentProcess.payAmount(RequestRide.cost);
                             break;
                         }
                         case 3: {
                             rider = new motorBike("1b12r2", "Black", "Honda", "Elsayed");
                             request.setRideDetails(rider, pickup, dest);
                             request.requestRide();
+                            PaymentProcess.payAmount(RequestRide.cost);
                             break;
                         }
                         case 4: {
                             rider = new Bus("aaa 111", "Blue", "MCV", "3am 3abdo");
                             request.setRideDetails(rider, pickup, dest);
                             request.requestRide();
+                            PaymentProcess.payAmount(RequestRide.cost);
                             break;
                         }
                         default: {
@@ -60,11 +60,9 @@ public class HomePage {
                             break;
                         }
                     }
-                   PaymentProcess.payAmount(RequestRide.cost);
                     home();
                 break;
-                case '2':
-                {
+                case '2': {
                     SupportSystem supportSystem = new SupportSystem();
                     System.out.println("enter your problem type \n 1 for Customer Service\n 2 for Technical support\n 3 for payment Support");
                     int priority= input.nextInt();
@@ -84,8 +82,6 @@ public class HomePage {
                 }
                 home();
             }
-
-
         }
     }
 

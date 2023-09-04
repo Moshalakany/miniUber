@@ -11,7 +11,9 @@ public class CustomerService implements SupportHandler
     public void handleRequest(SupportTicket ticket) {
         if (ticket.getPriority() == 1) {
             System.out.println("customer support is handling the issue: " + ticket.getIssue());
-        } else if (nextHandler != null) {
+        }
+        else
+        {
             nextHandler.handleRequest(ticket);
         }
     }

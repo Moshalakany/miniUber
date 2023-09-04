@@ -11,7 +11,8 @@ public class TechnicalSupport implements SupportHandler
     public void handleRequest(SupportTicket ticket) {
         if (ticket.getPriority() == 2) {
             System.out.println("technical support is handling the issue: " + ticket.getIssue());
-        } else if (nextHandler != null) {
+        }
+        else {
             nextHandler.handleRequest(ticket);
         }
     }

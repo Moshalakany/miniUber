@@ -5,7 +5,7 @@ public class PaymentProcess {
     static void payAmount(double amount)
     {
         PaymentStrategy payment;
-        PaymentContext context ;
+        PaymentContext context;
         System.out.println("press 1 to pay with cash");
         System.out.println("press 2 to pay with paypal");
         System.out.println("press 3 to pay with credit card");
@@ -13,8 +13,7 @@ public class PaymentProcess {
         switch (choice) {
             case "1": {
                 payment=new CashPayment();
-                context=new PaymentContext(payment);
-                context.processPayment(amount);
+                payment.pay(amount);
                 break;
             }
             case "2":{

@@ -13,7 +13,8 @@ public  class   SLFile
             bufferedWriter.newLine();
 
             System.out.println("User data saved to users.txt");
-        } catch (IOException e) {
+        }
+        catch (IOException e) {
             e.printStackTrace();
         }
     }

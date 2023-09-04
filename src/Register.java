@@ -1,4 +1,3 @@
-
 public class Register
 {
     private boolean isUserRegistered(String username) {
@@ -15,7 +14,8 @@ public class Register
             SLFile.users.add(newUser);
             SLFile.saveUserToFile(newUser);
             System.out.println("Account created successfully");
-        } else {
+        }
+        else {
             System.out.println("User with username " + username + " is already registered.");
         }
     }

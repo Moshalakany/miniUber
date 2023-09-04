@@ -5,6 +5,7 @@ public class normal extends Rider{
 
     @Override
     public double TripCost(double distance) {
-        return 1.5*distance;
+        TripPrice = 1.5*distance;
+        return TripPrice;
     }
 }
